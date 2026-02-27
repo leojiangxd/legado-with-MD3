@@ -88,6 +88,7 @@ android {
 
     buildTypes {
         getByName("release") {
+            manifestPlaceholders += mapOf()
             if (project.hasProperty("RELEASE_STORE_FILE")) {
                 signingConfig = signingConfigs.getByName("myConfig")
             }
@@ -99,6 +100,7 @@ android {
                 "proguard-rules.pro",
                 "cronet-proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
         getByName("debug") {
             applicationIdSuffix = ".debug"

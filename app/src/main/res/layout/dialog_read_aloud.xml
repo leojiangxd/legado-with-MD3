@@ -20,140 +20,140 @@
         <com.google.android.material.bottomsheet.BottomSheetDragHandleView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="0dp"
             android:minHeight="0dp"
             android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/bottom_sheet_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/aloud_config"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButtonGroup
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:layout_marginVertical="6dp">
+        android:paddingVertical="0dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tv_pre"
+            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/previous_chapter"
+            android:tooltipText="@string/previous_chapter"
+            app:icon="@drawable/ic_fast_rewind"
+            tools:ignore="UnusedAttribute" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iv_play_prev"
             style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
-            android:layout_width="wrap_content"
+            android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="@string/prev_sentence"
             android:tooltipText="@string/prev_sentence"
             app:icon="@drawable/ic_skip_previous"
             tools:ignore="UnusedAttribute" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iv_play_pause"
             style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginHorizontal="6dp"
             android:contentDescription="@string/audio_play"
             android:tooltipText="@string/audio_play"
             app:icon="@drawable/ic_play"
             tools:ignore="UnusedAttribute" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iv_stop"
             style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="6dp"
             android:contentDescription="@string/stop"
             android:tooltipText="@string/stop"
             app:icon="@drawable/ic_stop_black_24dp"
             tools:ignore="UnusedAttribute" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iv_play_next"
-            style="@style/Widget.Material3Expressive.Button.TonalButton"
-            android:layout_width="wrap_content"
+            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+            android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="@string/next_sentence"
-            android:text="@string/next_sentence"
+            android:tooltipText="@string/next_sentence"
             app:icon="@drawable/ic_skip_next"
             tools:ignore="UnusedAttribute" />
 
-    </com.google.android.material.button.MaterialButtonGroup>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tv_next"
+            style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/next_chapter"
+            android:tooltipText="@string/next_chapter"
+            app:icon="@drawable/ic_fast_forward"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginVertical="6dp">
+        android:paddingVertical="0dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_timer"
+            style="@style/Widget.Material3Expressive.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:minWidth="0dp"
+            android:ems="4"
+            android:insetLeft="4dp"
+            android:text="@string/timer_m" />
 
         <io.legado.app.lib.theme.view.ThemeSlider
             android:id="@+id/seek_timer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:stepSize="1.0"
             android:valueFrom="0.0"
-            android:valueTo="180.0"
-            android:stepSize="1.0" />
+            android:valueTo="180.0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/iv_timer"
             style="@style/Widget.Material3.Button.IconButton.Outlined"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:contentDescription="@string/set_timer"
             app:icon="@drawable/ic_time_add_24dp" />
     </LinearLayout>
-
-
-    <com.google.android.material.button.MaterialButtonGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_marginVertical="6dp"
-        android:layout_marginHorizontal="3dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tv_pre"
-            style="@style/Widget.Material3Expressive.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textColor="?attr/colorPrimary"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:minHeight="36dp"
-            android:text="@string/previous_chapter"
-            android:textSize="14sp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_timer"
-            style="@style/Widget.Material3Expressive.Button.TonalButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="6dp"
-            android:layout_weight="1"
-            android:padding="0dp"
-            android:text="@string/timer_m" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tv_next"
-            style="@style/Widget.Material3Expressive.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="?attr/colorPrimary"
-            android:layout_weight="1"
-            android:layout_marginStart="6dp"
-            android:text="@string/next_chapter"
-            android:textSize="14sp" />
-
-    </com.google.android.material.button.MaterialButtonGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -166,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:paddingHorizontal="4dp">
 
             <TextView
                 android:id="@+id/tv_tts_speed"
@@ -206,7 +206,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:paddingVertical="8dp">
+            android:paddingVertical="0dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/iv_tts_speech_reduce"
@@ -244,7 +244,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:baselineAligned="false"
         android:orientation="horizontal">
 
@@ -252,6 +251,7 @@
             android:id="@+id/ll_catalog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/chapter_list"
@@ -271,7 +271,6 @@
                 android:id="@+id/tv_catalog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="3dp"
                 android:ellipsize="middle"
                 android:singleLine="true"
@@ -279,15 +278,16 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <View
+        <Space
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
         <LinearLayout
             android:id="@+id/ll_main_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/read_aloud"
@@ -308,7 +308,6 @@
                 android:id="@+id/tv_main_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="3dp"
                 android:ellipsize="middle"
                 android:singleLine="true"
@@ -316,15 +315,16 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <View
+        <Space
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
         <LinearLayout
             android:id="@+id/ll_to_backstage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/to_backstage"
@@ -334,17 +334,16 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/iv_to_backstage"
+                style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
                 app:icon="@drawable/ic_visibility_off"
-                app:iconGravity="textStart"/>
+                app:iconGravity="textStart" />
 
             <TextView
                 android:id="@+id/tv_to_backstage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="3dp"
                 android:ellipsize="middle"
                 android:singleLine="true"
@@ -352,15 +351,16 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <View
+        <Space
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
         <LinearLayout
             android:id="@+id/ll_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/setting"
@@ -380,7 +380,6 @@
                 android:id="@+id/tv_setting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="3dp"
                 android:ellipsize="middle"
                 android:singleLine="true"

@@ -574,7 +574,7 @@
     <string name="my">Me</string>
     <string name="reading">Read</string>
     <string name="battery_show">%d%%</string>
-    <string name="timer_m">%d min</string>
+    <string name="timer_m">%d</string>
     <string name="brightness_auto">Auto-Brightness %s</string>
     <string name="read_aloud_by_page">Speak by pages</string>
     <string name="speak_engine">Speak Engine</string>
@@ -690,7 +690,7 @@
     <string name="bar_elevation">Navigation bar shadow</string>
     <string name="bar_elevation_s">Current shadow size(elevation): %s</string>
     <string name="btn_default_s">Default</string>
-    <string name="main_menu">Main menu</string>
+    <string name="main_menu">Main Menu</string>
     <string name="request_permission">Tap to grant permission</string>
     <string name="tip_local_perm_request_storage">Legado needs Storage permission, please tap the "Grant Permission" button below, or go to "Settings"-"Application Permissions"-to open the required permission. If the permission is still not work, please tap "Select Folder" in the upper right corner to use the system folder picker.</string>
     <string name="alouding_disable">The selected text cannot be spoken in full text speech</string>
